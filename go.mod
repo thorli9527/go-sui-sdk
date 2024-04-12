@@ -1,4 +1,4 @@
-module github.com/thorli9527/go-sui/v2
+module github.com/thorli9527/go-sui
 
 go 1.18
 
