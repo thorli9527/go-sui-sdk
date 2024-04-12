@@ -2,8 +2,8 @@ package types
 
 import (
 	"fmt"
-	"github.com/coming-chat/go-sui/v2/sui_types"
 	"github.com/shopspring/decimal"
+	"github.com/thorli9527/go-sui/v2/sui_types"
 	"math/big"
 )
 

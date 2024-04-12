@@ -3,10 +3,10 @@ package sui_types
 import (
 	"errors"
 	"fmt"
-	"github.com/coming-chat/go-sui/v2/lib"
-	"github.com/coming-chat/go-sui/v2/move_types"
 	"github.com/fardream/go-bcs/bcs"
 	"github.com/mitchellh/hashstructure/v2"
+	"github.com/thorli9527/go-sui/v2/lib"
+	"github.com/thorli9527/go-sui/v2/move_types"
 	"strconv"
 )
 

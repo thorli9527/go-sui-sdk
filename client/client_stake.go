@@ -3,11 +3,11 @@ package client
 import (
 	"context"
 
-	"github.com/coming-chat/go-sui/v2/lib"
-	"github.com/coming-chat/go-sui/v2/sui_types"
-	"github.com/coming-chat/go-sui/v2/sui_types/sui_system_state"
-	"github.com/coming-chat/go-sui/v2/types"
 	"github.com/fardream/go-bcs/bcs"
+	"github.com/thorli9527/go-sui/v2/lib"
+	"github.com/thorli9527/go-sui/v2/sui_types"
+	"github.com/thorli9527/go-sui/v2/sui_types/sui_system_state"
+	"github.com/thorli9527/go-sui/v2/types"
 )
 
 func (c *Client) GetLatestSuiSystemState(ctx context.Context) (*types.SuiSystemStateSummary, error) {
@@ -106,29 +106,38 @@ func BCS_RequestAddStake(
 	return bcs.Marshal(tx)
 }
 
-func BCS_RequestWithdrawStake(signer suiAddress, stakedSuiRef sui_types.ObjectRef, gas []*sui_types.ObjectRef, gasBudget, gasPrice uint64) ([]byte, error) {
+func BCS_RequestWithdrawStake(
+	signer suiAddress,
+	stakedSuiRef sui_types.ObjectRef,
+	gas []*sui_types.ObjectRef,
+	gasBudget, gasPrice uint64,
+) ([]byte, error) {
 	// build with BCS
 	ptb := sui_types.NewProgrammableTransactionBuilder()
 	arg0, err := ptb.Obj(sui_types.SuiSystemMutObj)
 	if err != nil {
 		return nil, err
 	}
-	arg1, err := ptb.Obj(sui_types.ObjectArg{
-		ImmOrOwnedObject: &stakedSuiRef,
-	})
+	arg1, err := ptb.Obj(
+		sui_types.ObjectArg{
+			ImmOrOwnedObject: &stakedSuiRef,
+		},
+	)
 	if err != nil {
 		return nil, err
 	}
-	ptb.Command(sui_types.Command{
-		MoveCall: &sui_types.ProgrammableMoveCall{
-			Package:  *sui_types.SuiSystemAddress,
-			Module:   sui_system_state.SuiSystemModuleName,
-			Function: sui_types.WithdrawStakeFunName,
-			Arguments: []sui_types.Argument{
-				arg0, arg1,
+	ptb.Command(
+		sui_types.Command{
+			MoveCall: &sui_types.ProgrammableMoveCall{
+				Package:  *sui_types.SuiSystemAddress,
+				Module:   sui_system_state.SuiSystemModuleName,
+				Function: sui_types.WithdrawStakeFunName,
+				Arguments: []sui_types.Argument{
+					arg0, arg1,
+				},
 			},
 		},
-	})
+	)
 	pt := ptb.Finish()
 	tx := sui_types.NewProgrammable(
 		signer, gas, pt, gasBudget, gasPrice,

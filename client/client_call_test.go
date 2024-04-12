@@ -7,11 +7,11 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/coming-chat/go-sui/v2/lib"
-	"github.com/coming-chat/go-sui/v2/sui_types"
+	"github.com/thorli9527/go-sui/v2/lib"
+	"github.com/thorli9527/go-sui/v2/sui_types"
 
-	"github.com/coming-chat/go-sui/v2/types"
 	"github.com/stretchr/testify/require"
+	"github.com/thorli9527/go-sui/v2/types"
 )
 
 //func TestClient_BatchGetTransaction(t *testing.T) {

@@ -1,6 +1,6 @@
 package sui_types
 
-import "github.com/coming-chat/go-sui/v2/lib"
+import "github.com/thorli9527/go-sui/v2/lib"
 
 var (
 	SuiSystemMut = CallArg{

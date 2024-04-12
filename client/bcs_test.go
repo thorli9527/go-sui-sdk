@@ -4,12 +4,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/coming-chat/go-sui/v2/lib"
-	"github.com/coming-chat/go-sui/v2/sui_types"
-	"github.com/coming-chat/go-sui/v2/sui_types/sui_system_state"
-	"github.com/coming-chat/go-sui/v2/types"
 	"github.com/fardream/go-bcs/bcs"
 	"github.com/stretchr/testify/require"
+	"github.com/thorli9527/go-sui/v2/lib"
+	"github.com/thorli9527/go-sui/v2/sui_types"
+	"github.com/thorli9527/go-sui/v2/sui_types/sui_system_state"
+	"github.com/thorli9527/go-sui/v2/types"
 )
 
 func TestBCS_TransferObject(t *testing.T) {

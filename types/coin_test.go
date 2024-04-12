@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/coming-chat/go-sui/v2/sui_types"
 	"github.com/stretchr/testify/require"
+	"github.com/thorli9527/go-sui/v2/sui_types"
 )
 
 type suiAddress = sui_types.SuiAddress

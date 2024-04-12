@@ -5,9 +5,9 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/coming-chat/go-sui/v2/lib"
-	"github.com/coming-chat/go-sui/v2/sui_types"
-	"github.com/coming-chat/go-sui/v2/types"
+	"github.com/thorli9527/go-sui/v2/lib"
+	"github.com/thorli9527/go-sui/v2/sui_types"
+	"github.com/thorli9527/go-sui/v2/types"
 )
 
 // NOTE: This copys the query limit from our Rust JSON RPC backend, this needs to be kept in sync!
@@ -397,8 +397,10 @@ func (c *Client) ResolveNameServiceAddress(ctx context.Context, suiName string) 
 	return &resp, nil
 }
 
-func (c *Client) ResolveNameServiceNames(ctx context.Context,
-	owner suiAddress, cursor *suiObjectID, limit *uint) (*types.SuiNamePage, error) {
+func (c *Client) ResolveNameServiceNames(
+	ctx context.Context,
+	owner suiAddress, cursor *suiObjectID, limit *uint,
+) (*types.SuiNamePage, error) {
 	var resp types.SuiNamePage
 	return &resp, c.CallContext(ctx, &resp, resolveNameServiceNames, owner, cursor, limit)
 }

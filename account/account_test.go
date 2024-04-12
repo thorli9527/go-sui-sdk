@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/coming-chat/go-sui/v2/sui_types"
 	"github.com/stretchr/testify/require"
+	"github.com/thorli9527/go-sui/v2/sui_types"
 )
 
 var Mnemonic = os.Getenv("WalletSdkTestM1")
