@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/thorli9527/go-sui/v2/account"
-	"github.com/thorli9527/go-sui/v2/types"
+	"github.com/thorli9527/go-sui-sdk/account"
+	"github.com/thorli9527/go-sui-sdk/types"
 )
 
 func TestAccountSignAndSend(t *testing.T) {

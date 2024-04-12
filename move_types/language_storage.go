@@ -1,6 +1,6 @@
 package move_types
 
-import "github.com/thorli9527/go-sui/v2/lib"
+import "github.com/thorli9527/go-sui-sdk/lib"
 
 type StructTag struct {
 	Address    AccountAddress

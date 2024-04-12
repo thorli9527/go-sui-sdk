@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/thorli9527/go-sui/v2/lib"
-	"github.com/thorli9527/go-sui/v2/sui_types"
+	"github.com/thorli9527/go-sui-sdk/lib"
+	"github.com/thorli9527/go-sui-sdk/sui_types"
 )
 
 type DynamicFieldInfo struct {

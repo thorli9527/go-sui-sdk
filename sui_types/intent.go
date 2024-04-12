@@ -1,7 +1,7 @@
 package sui_types
 
 import (
-	"github.com/thorli9527/go-sui/v2/lib"
+	"github.com/thorli9527/go-sui-sdk/lib"
 )
 
 type IntentScope struct {

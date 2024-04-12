@@ -1,6 +1,6 @@
 package sui_types
 
-import "github.com/thorli9527/go-sui/v2/move_types"
+import "github.com/thorli9527/go-sui-sdk/move_types"
 
 const (
 	StakingPoolModuleName = move_types.Identifier("staking_pool")

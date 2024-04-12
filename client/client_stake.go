@@ -4,10 +4,10 @@ import (
 	"context"
 
 	"github.com/fardream/go-bcs/bcs"
-	"github.com/thorli9527/go-sui/v2/lib"
-	"github.com/thorli9527/go-sui/v2/sui_types"
-	"github.com/thorli9527/go-sui/v2/sui_types/sui_system_state"
-	"github.com/thorli9527/go-sui/v2/types"
+	"github.com/thorli9527/go-sui-sdk/lib"
+	"github.com/thorli9527/go-sui-sdk/sui_types"
+	"github.com/thorli9527/go-sui-sdk/sui_types/sui_system_state"
+	"github.com/thorli9527/go-sui-sdk/types"
 )
 
 func (c *Client) GetLatestSuiSystemState(ctx context.Context) (*types.SuiSystemStateSummary, error) {

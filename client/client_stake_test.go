@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/thorli9527/go-sui/v2/sui_types"
-	"github.com/thorli9527/go-sui/v2/types"
+	"github.com/thorli9527/go-sui-sdk/sui_types"
+	"github.com/thorli9527/go-sui-sdk/types"
 )
 
 const (
